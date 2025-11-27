@@ -1,58 +1,76 @@
-Projeto: Página Web Simples em HTML feita para hospedagem temporária
+Undertale Mini Wiki — README
+Visão geral
 
-Este projeto consiste em uma única página construída usando apenas HTML, no arquivo index.html.
+Undertale Mini Wiki é uma página web de uma única página (index.html) que apresenta uma mini wikipédia do universo de Undertale. É uma página web simples em HTML feita para hospedagem temporária
 
+Funcionalidades principais
 
-📄 Estrutura do Projeto
-/
-└── index.html
+Tema escuro com contraste alto (legibilidade em foco).
 
+Cabeçalho com logo e banner de destaque.
 
-🧰 Tecnologias Utilizadas
+Seções: Home, História (vídeo incorporado) e Personagens.
 
-HTML5: Utilizado para estruturar todos os elementos visuais da página.
+Grid responsivo com as caixas de personagens.
 
+Imagens clicáveis que revelam/ocultam descrições (comportamento controlado por JavaScript simples).
 
-📌 Descrição Geral
+Layout responsivo básico para dispositivos móveis.
 
-O arquivo index.html contém:
+Estrutura do arquivo
 
+O projeto consiste apenas de:
 
-A estrutura básica de um documento HTML (<!DOCTYPE html>, <html>, <head>, <body>).
+index.html
 
-Uma área principal com imagens e conteúdo organizado em seções.
+Todo o HTML, CSS e JavaScript estão embutidos dentro desse arquivo.
 
-Uso de estilos inline e classes CSS definidas diretamente no próprio arquivo.
+Como usar
 
-Links de navegação interna simulando seções de um sistema.
+Baixe (ou copie) o arquivo index.html.
 
-Elementos visuais como ícones, caixas de conteúdo e imagens.
+Abra-o diretamente no navegador (Chrome, Firefox, Edge, Safari).
 
+Para editar texto, imagens ou estilos, abra index.html num editor de texto (VSCode, Sublime, Notepad++ etc.), faça as alterações e salve.
 
-▶️ Como Executar
+Recarregue a página no navegador para ver as mudanças.
 
-Baixe ou copie o arquivo index.html.
+Principais trechos editáveis
 
-Abra-o em qualquer navegador (Chrome, Firefox, Edge, etc.).
+Cabeçalho: logo e estilos em header (linha no topo do arquivo).
 
-Não é necessário servidor ou instalação adicional.
+Banner: imagem com classe banner.
 
+Seções: blocos <section id="home">, <section id="historia">, <section id="personagens">.
 
-🛠️ Personalização
+Personagens: cada personagem é um bloco .perso-box contendo <h3>, <img> com onclick e <div id="iX"> com o texto.
 
-Você pode:
+CSS: dentro da tag <style> no <head> (cores, tamanhos, responsividade).
 
-Alterar estilos diretamente dentro da tag <style> no próprio arquivo.
+Script: função toggleConteudo(id) embutida na seção de personagens (para abrir/fechar descrições).
 
-Substituir imagens, textos e links conforme necessário.
+Como modificar ou estender
 
-Adicionar funcionalidades extras com JavaScript, caso deseje expandir o projeto.
+Adicionar/remover personagem: copie um bloco .perso-box e atualize h3, src da imagem e o id do div de descrição (i1 → i11 etc.), e a chamada onclick="toggleConteudo('iX')" correspondente.
 
+Alterar cores: edite as variáveis/valores no CSS (por exemplo border: 2px solid #913b85; e border-top: 3px solid #5e2356;).
 
-📂 Possível Evolução
+Separar CSS/JS externos: mova o conteúdo de <style> para style.css e a função toggleConteudo para script.js, e referencie com <link> / <script src=>.
 
-Separar estilos em um arquivo CSS externo.
+Accordion (fechar um ao abrir outro): substituir a função toggleConteudo por uma que feche todas antes de abrir a selecionada (exemplo disponível na documentação técnica).
 
-Criar um arquivo JavaScript para interatividade.
+Acessibilidade e recomendações
 
-Modularizar a página em múltiplos componentes (header, sidebar, main).
+alt em imagens: já presentes; mantenha textos descritivos para leitores de tela.
+
+Contraste: tema escuro já utiliza contraste; verifique WCAG se for necessário conformidade.
+
+Navegação por teclado: imagens com onclick não são focáveis por padrão — considere trocar por <button> ou adicionar tabindex="0" e keydown handlers para acessibilidade.
+
+Licença e créditos
+
+Este projeto é um fan-made e educativo.
+
+Undertale é propriedade de Toby Fox.
+
+Use o projeto para aprendizado e demonstração; não comercialize materiais protegidos por direitos autorais sem permissão.
