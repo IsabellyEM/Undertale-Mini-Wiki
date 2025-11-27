@@ -94,11 +94,4 @@ Este projeto é uma obra de fã, sem fins comerciais.
 Undertale é uma criação de Toby Fox.
 O conteúdo deste arquivo se destina exclusivamente a fins educativos e demonstrativos.
 
----
 
-Se quiser, posso criar também:
-
-* Uma versão em inglês do README
-* Uma documentação técnica separada
-* Uma árvore estruturada de seções
-* Expansão do código e reorganização externa de CSS/JS
