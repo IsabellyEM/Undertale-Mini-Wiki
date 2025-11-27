@@ -1,76 +1,104 @@
-Undertale Mini Wiki — README
-Visão geral
+# Undertale Mini Wiki — README
+
+## Visão Geral
 
 Undertale Mini Wiki é uma página web de uma única página (index.html) que apresenta uma mini wikipédia do universo de Undertale. É uma página web simples em HTML feita para hospedagem temporária
 
-Funcionalidades principais
+O arquivo contém todo o HTML, CSS e JavaScript incorporados, tornando o projeto leve, portátil e simples de editar.
 
-Tema escuro com contraste alto (legibilidade em foco).
+---
 
-Cabeçalho com logo e banner de destaque.
+## Funcionalidades Principais
 
-Seções: Home, História (vídeo incorporado) e Personagens.
+* Tema escuro inspirado no visual de Undertale.
+* Layout responsivo que se adapta a desktop e dispositivos móveis.
+* Cabeçalho com logotipo e banner ilustrativo.
+* Seção de história com vídeo incorporado.
+* Grid de personagens com imagens clicáveis.
+* Sistema de revelar/ocultar informações através de um script interno simples.
+* Cartões estilizados, efeitos de hover e sombras.
 
-Grid responsivo com as caixas de personagens.
+---
 
-Imagens clicáveis que revelam/ocultam descrições (comportamento controlado por JavaScript simples).
+## Estrutura do Projeto
 
-Layout responsivo básico para dispositivos móveis.
+Como o projeto é composto apenas pelo arquivo index.html, nele estão contidos:
 
-Estrutura do arquivo
+* A estrutura HTML da página.
+* Os estilos visuais aplicados em uma tag style.
+* Um pequeno script responsável pela interação dos personagens.
+* Imagens e conteúdos organizados por seções.
 
-O projeto consiste apenas de:
+---
 
-index.html
+## Conteúdo das Seções
 
-Todo o HTML, CSS e JavaScript estão embutidos dentro desse arquivo.
+### Cabeçalho
 
-Como usar
+Exibe o logotipo oficial de Undertale e define o início visual da página.
 
-Baixe (ou copie) o arquivo index.html.
+### Banner
 
-Abra-o diretamente no navegador (Chrome, Firefox, Edge, Safari).
+Uma imagem em destaque exibida abaixo do cabeçalho, conferindo personalidade ao site.
 
-Para editar texto, imagens ou estilos, abra index.html num editor de texto (VSCode, Sublime, Notepad++ etc.), faça as alterações e salve.
+### Seção Home
 
-Recarregue a página no navegador para ver as mudanças.
+Apresentação da wiki, fornecendo uma introdução rápida ao conteúdo do site.
 
-Principais trechos editáveis
+### Seção História
 
-Cabeçalho: logo e estilos em header (linha no topo do arquivo).
+Inclui um vídeo explicativo do jogo e uma imagem do mapa, ambos em cartões estilizados.
 
-Banner: imagem com classe banner.
+### Seção Personagens
 
-Seções: blocos <section id="home">, <section id="historia">, <section id="personagens">.
+Apresenta os personagens principais do jogo.
+Cada personagem contém:
 
-Personagens: cada personagem é um bloco .perso-box contendo <h3>, <img> com onclick e <div id="iX"> com o texto.
+* Nome do personagem
+* Imagem clicável
+* Descrição oculta que aparece ao clicar
 
-CSS: dentro da tag <style> no <head> (cores, tamanhos, responsividade).
+A lógica de revelação do texto é feita por uma função JavaScript que alterna entre ocultar e mostrar o conteúdo.
 
-Script: função toggleConteudo(id) embutida na seção de personagens (para abrir/fechar descrições).
+---
 
-Como modificar ou estender
+## Como Usar
 
-Adicionar/remover personagem: copie um bloco .perso-box e atualize h3, src da imagem e o id do div de descrição (i1 → i11 etc.), e a chamada onclick="toggleConteudo('iX')" correspondente.
+1. Abra o arquivo index.html diretamente em qualquer navegador moderno.
+2. Navegue pelas seções rolando a página.
+3. Clique em qualquer imagem de personagem para mostrar ou esconder sua descrição.
+4. Para modificar o conteúdo, abra o arquivo em um editor de texto e procure a seção desejada.
 
-Alterar cores: edite as variáveis/valores no CSS (por exemplo border: 2px solid #913b85; e border-top: 3px solid #5e2356;).
+---
 
-Separar CSS/JS externos: mova o conteúdo de <style> para style.css e a função toggleConteudo para script.js, e referencie com <link> / <script src=>.
+## Personalização
 
-Accordion (fechar um ao abrir outro): substituir a função toggleConteudo por uma que feche todas antes de abrir a selecionada (exemplo disponível na documentação técnica).
+* Para adicionar novos personagens, basta replicar uma caixa existente e alterar imagem, nome e texto.
+* As cores, fontes e efeitos podem ser ajustados dentro da área de estilos no início do documento.
+* Caso deseje maior organização, é possível separar o CSS e o JavaScript em arquivos externos.
+* O estilo visual pode ser expandido para incluir animações, temas alternativos ou efeitos sonoros.
 
-Acessibilidade e recomendações
+---
 
-alt em imagens: já presentes; mantenha textos descritivos para leitores de tela.
+## Acessibilidade
 
-Contraste: tema escuro já utiliza contraste; verifique WCAG se for necessário conformidade.
+* Todas as imagens incluem texto alternativo.
+* O contraste entre fundo e texto atende boa parte das diretrizes de leitura confortável.
+* Pode-se melhorar a acessibilidade substituindo imagens clicáveis por botões ou adicionando navegação por teclado.
 
-Navegação por teclado: imagens com onclick não são focáveis por padrão — considere trocar por <button> ou adicionar tabindex="0" e keydown handlers para acessibilidade.
+---
 
-Licença e créditos
+## Créditos
 
-Este projeto é um fan-made e educativo.
+Este projeto é uma obra de fã, sem fins comerciais.
+Undertale é uma criação de Toby Fox.
+O conteúdo deste arquivo se destina exclusivamente a fins educativos e demonstrativos.
 
-Undertale é propriedade de Toby Fox.
+---
 
-Use o projeto para aprendizado e demonstração; não comercialize materiais protegidos por direitos autorais sem permissão.
+Se quiser, posso criar também:
+
+* Uma versão em inglês do README
+* Uma documentação técnica separada
+* Uma árvore estruturada de seções
+* Expansão do código e reorganização externa de CSS/JS
